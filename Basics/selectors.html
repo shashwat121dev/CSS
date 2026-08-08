@@ -4,8 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selectors</title>
+    <style>
+
+        /* *{
+            margin: 0;
+            padding: 0;
+        } */
+
+        body{
+            background-color: #414141;
+            color: #ffffff;
+        }
+
+        .bg-orange{
+            background-color: orange;
+        }
+
+        #bg-green{
+            background-color: rgb(40, 183, 40);
+        }
+
+        /* Iski priority 'header > a' se zada hai  */
+        a[target= "_blank"]{
+            background-color: pink;
+            padding: 6px;
+        }
+
+        /* Class aur id ka zada prefrence hota hai isse */
+        h1,h2,h3{  
+            background-color: rgb(151, 232, 226);
+        }
+
+        ul li{
+            background-color: #fff;
+            color: #000;
+        }
+
+        header > a {
+            background-color: rgb(129, 42, 42);
+        }
+    </style>
 </head>
 <body>
     
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+    <h2 class = "bg-orange">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
+    <h3 id = "bg-green" class = "bg-orange">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At?</h3>
+
+    <a href="https://www.google.com" target="_blank"> Google </a>
+
+    <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+        <li>Four</li>
+        <li>Five</li>
+    </ul>
+    <li>Six</li> <!-- Dhyaan Se dekho ye highligh nahi ho raha hai  -->
+
+    <header>
+        <a href="https://www.youtube.com/" target="_parent">youtube</a>
+        <a href="https://www.facebook.com/" target="_parent">facebook</a>
+    </header>
 </body>
-</html>
+</html> 

@@ -111,23 +111,29 @@ body{
     display: flex;
 }
 
-.btn{
+.btn {
     padding: 10px 20px;
     margin: 0 10px;
     transform: skewX(-10deg);
     cursor: pointer;
-    border: 1px solid  rgb(161, 20, 116);
+    border: 1px solid rgb(161, 20, 116);
     background-color: transparent;
     color: #ffffff;
-
+    transition: 0.3s;
 }
 
-.btn1{
-    background: #a11474;
-    background: linear-gradient(135deg,
+.btn1 {
+    background: linear-gradient(
+        135deg,
         #090A14 0%,
         #210253 25%,
-        #a11474 100%);
+        #a11474 100%
+    );
+}
+
+.btn:hover {
+    background: #d72bd1;
+    box-shadow: 0 0 20px rgba(215, 43, 209, 0.5);
 }
 
 .band{
@@ -210,3 +216,88 @@ body{
 
     z-index: 2;
 }
+
+.discover-section {
+    width: 70%;
+    margin: 100px auto;
+}
+
+.discover-card {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+
+    /* Better background */
+    background: linear-gradient(
+        90deg,
+        #17112f,
+        #24134a
+    );
+
+    box-shadow: 0 0 40px rgba(130, 50, 200, 0.15);
+}
+
+/* IMAGE */
+.discover-section .discover-card img {
+    width: 55%;
+    height: 500px;
+    object-fit: cover;
+    /* margin: -70px; */
+
+    /* Removes the hard image boundary */
+    -webkit-mask-image: linear-gradient(
+        to right,
+        black 70%,
+        transparent 100%
+    );
+
+    mask-image: linear-gradient(
+        to right,
+        black 70%,
+        transparent 100%
+    );
+}
+
+/* TEXT AREA */
+.discover-card-details {
+    flex: 1;
+    padding: 50px 60px 50px 20px;
+}
+
+/* Heading */
+.big-text {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+/* Description */
+.section-description {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #c8c2d8;
+    max-width: 450px;
+    margin-bottom: 30px;
+}
+
+/* Button */
+ .discover-card-details-btn {
+    width: fit-content;
+    display: inline-block;
+    padding: 10px 25px;
+    border: 1px solid #d72bd1;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    transform: skewX(-10deg);
+
+}
+
+ .discover-card-details-btn:hover {
+    background: #d72bd1;
+    box-shadow: 0 0 20px rgba(215, 43, 209, 0.5);
+}  
+
